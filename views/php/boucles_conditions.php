@@ -42,7 +42,9 @@ include("../templates/header.php");
             <!-- Result Tab -->
             <div id="result1">
               <?php foreach (range(1, 150, 2) as $number): ?>
-                <p style="display: inline"><?= "$number\n" ?></p>
+                <p style="display: inline">
+                  <?= "$number\n" ?>
+                </p>
               <?php endforeach; ?>
             </div>
           </div>

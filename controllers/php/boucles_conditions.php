@@ -4,6 +4,7 @@ $title = "Exercices PHP - Boucles et Conditions";
 
 // Disable the navbar extended tabs
 $tabs = true;
+
 // Items to be shown in the extended navbar
 $items = array(
   "exercice1" => "0..150",
@@ -16,7 +17,9 @@ $ex1 = /** @lang PHP */
   <<<'PHP'
 
 <?php foreach (range(1, 150, 2) as $number): ?>
-  <p><?= $number ?></p>
+  <p>
+    <?= $number ?>
+  </p>
 <?php endforeach; ?>
 PHP;
 
@@ -25,7 +28,9 @@ $ex2 = /** @lang PHP */
   <<<'PHP'
 
 <?php for ($i = 1; $i <= 500; $i++): ?>
-  <p>Je dois faire des sauvegardes régulières de mes fichiers</p>
+  <p>
+    Je dois faire des sauvegardes régulières de mes fichiers
+  </p>
 <?php endfor; ?>
 PHP;
 
