@@ -2,62 +2,12 @@
 <html lang="fr">
 
 <?php
-$title = "Exercices PHP - Boucles et Conditions";
+include("../../controllers/php/boucles_conditions.php");
 include("../templates/header.php");
 ?>
 
 <body>
-<?php
-$tabs = true;
-$items = array(
-  "exercice1" => "0..150",
-  "exercice2" => "Sauvegardes",
-  "exercice3" => "Tableau"
-);
-
-$ex1 = <<<'EOT'
-
-<?php foreach (range(1, 150, 2) as $number): ?>
-  <p><?= $number ?></p>
-<?php endforeach; ?>
-EOT;
-
-$ex2 = <<<'EOT'
-
-<?php for ($i = 1; $i <= 500; $i++): ?>
-  <p>Je dois faire des sauvegardes régulières de mes fichiers</p>
-<?php endfor; ?>
-EOT;
-
-$ex3 = <<<'EOT'
-
-<table>
-  <thead>
-  <tr>
-    <?php foreach (range(-1, 12) as $number): ?>
-      <?php if ($number == -1): ?>
-        <th></th>
-      <?php else: ?>
-        <th><?= $number ?></th>
-      <?php endif; ?>
-    <?php endforeach; ?>
-  </tr>
-  </thead>
-  <tbody>
-  <?php foreach (range(0, 12) as $i): ?>
-    <tr>
-      <td><?= $i ?></td>
-      <?php foreach (range(0, 12) as $j): ?>
-        <td><?= $i * $j ?></td>
-      <?php endforeach; ?>
-    </tr>
-  <?php endforeach; ?>
-  </tbody>
-</table>
-EOT;
-
-include("../templates/navbar.php");
-?>
+<?php include("../templates/navbar.php"); ?>
 
 <!-- Page Content -->
 <main class="section" role="main">
@@ -83,11 +33,11 @@ include("../templates/navbar.php");
           <div class="card-content grey lighten-4">
             <!-- Code Tab -->
             <div id="code1">
-            <pre>
-              <code>
-                <?= htmlspecialchars($ex1); ?>
-              </code>
-            </pre>
+              <pre>
+                <code>
+                  <?= htmlspecialchars($ex1); ?>
+                </code>
+              </pre>
             </div>
             <!-- Result Tab -->
             <div id="result1">
@@ -117,11 +67,11 @@ include("../templates/navbar.php");
           <div class="card-content grey lighten-4">
             <!-- Code Tab -->
             <div id="code2">
-            <pre>
-              <code>
-                <?= htmlspecialchars($ex2); ?>
-              </code>
-            </pre>
+              <pre>
+                <code>
+                  <?= htmlspecialchars($ex2); ?>
+                </code>
+              </pre>
             </div>
             <!-- Result Tab -->
             <div id="result2">
@@ -152,11 +102,11 @@ include("../templates/navbar.php");
           <div class="card-content grey lighten-4">
             <!-- Code Tab -->
             <div id="code3">
-            <pre>
-              <code>
-                <?= htmlspecialchars($ex3); ?>
-              </code>
-            </pre>
+              <pre>
+                <code>
+                  <?= htmlspecialchars($ex3); ?>
+                </code>
+              </pre>
             </div>
             <!-- Result Tab -->
             <div id="result3">

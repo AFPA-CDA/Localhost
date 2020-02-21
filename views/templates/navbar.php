@@ -4,14 +4,14 @@
     <ul class="dropdown-content" id="php">
       <li><a href="../php/initiation.php">Initiation</a></li>
       <li><a href="../php/boucles_conditions.php">Les boucles et les conditions</a></li>
-      <li><a href="#!">Les tableaux</a></li>
+      <li><a href="../php/tableaux.php">Les tableaux</a></li>
     </ul>
 
     <!-- Another dropdown to prevent data-target error -->
     <ul class="dropdown-content" id="php2">
       <li><a href="../php/initiation.php">Initiation</a></li>
       <li><a href="../php/boucles_conditions.php">Les boucles et les conditions</a></li>
-      <li><a href="#!">Les tableaux</a></li>
+      <li><a href="../php/tableaux.php">Les tableaux</a></li>
     </ul>
 
     <!-- Navbar -->

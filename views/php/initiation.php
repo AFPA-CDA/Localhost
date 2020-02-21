@@ -2,19 +2,12 @@
 <html lang="fr">
 
 <?php
-$title = "Exercices PHP - Initiation";
+include("../../controllers/php/initiation.php");
 include("../templates/header.php");
 ?>
 
 <body>
-<?php
-$tabs = false;
-
-$clientAddress = '<?= $_SERVER["REMOTE_ADDR"]; ?>';
-$serverAddress = '<?= $_SERVER["SERVER_ADDR"]; ?>';
-
-include("../templates/navbar.php");
-?>
+<?php include("../templates/navbar.php"); ?>
 
 <!-- Page Content -->
 <main class="section" role="main">
