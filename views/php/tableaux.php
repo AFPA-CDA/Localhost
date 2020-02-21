@@ -255,63 +255,107 @@ include("../templates/header.php");
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card" id="exercice3">
-          <!--Card Content -->
-          <div class="card-content">
-            <p class="center-align flow-text">
-              Ecrire un script qui affiche la table de multiplication totale de {1,...,12} par {1,...,12} dans un
-              tableau HTML
-            </p>
-          </div>
-          <!-- Card Tabs -->
-          <div class="card-tabs">
-            <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a class="active" href="#code3">Code</a></li>
-              <li class="tab"><a href="#result3">Résultat</a></li>
-            </ul>
-          </div>
-          <!-- Card Content -->
-          <div class="card-content grey lighten-4">
-            <!-- Code Tab -->
-            <div id="code3">
-            <pre>
-              <code>
-                <?= htmlspecialchars($ex3); ?>
-              </code>
-            </pre>
+        <!-- Cards 3 Section -->
+        <div id="exercice3">
+          <!-- First Card -->
+          <div class="card">
+            <!-- Card Content -->
+            <div class="card-content">
+              <p class="center-align flow-text">
+                Affichez la liste des régions (par ordre alphabétique) suivie du nom des départements.
+              </p>
             </div>
-            <!-- Result Tab -->
-            <div id="result3">
-              <table class="highlight responsive-table">
-                <thead>
-                <tr>
-                  <?php foreach (range(-1, 12) as $number): ?>
-                    <?php if ($number == -1): ?>
-                      <th></th>
-                    <?php else: ?>
-                      <th><?= $number ?></th>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach (range(0, 12) as $i): ?>
+            <!-- Card Tabs -->
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#code3p1">Code</a></li>
+                <li class="tab"><a href="#result3p1">Résultat</a></li>
+              </ul>
+            </div>
+            <!-- Card Content -->
+            <div class="card-content grey lighten-4">
+              <!-- Code Tab -->
+              <div id="code3p1">
+              <pre>
+                <code>
+                  <?= htmlspecialchars($ex3p1); ?>
+                </code>
+              </pre>
+              </div>
+              <!-- Result Tab -->
+              <div id="result3p1">
+                <?php ksort($departements); ?>
+                <table class="centered highlight responsive-table">
+                  <thead>
                   <tr>
-                    <td><?= $i ?></td>
-                    <?php foreach (range(0, 12) as $j): ?>
-                      <td><?= $i * $j ?></td>
-                    <?php endforeach; ?>
+                    <th>Régions</th>
+                    <th>Départements</th>
                   </tr>
-                <?php endforeach; ?>
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                  <?php foreach ($departements as $region => $value): ?>
+                    <?php foreach ($value as $departement): ?>
+                      <tr>
+                        <td><?= $region ?></td>
+                        <td><?= $departement ?></td>
+                      </tr>
+                    <?php endforeach; ?>
+                  <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Card -->
+          <div class="card">
+            <!-- Card Content -->
+            <div class="card-content">
+              <p class="center-align flow-text">
+                Affichez la liste des régions suivie du nombre de départements
+              </p>
+            </div>
+            <!-- Card Tabs -->
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#code3p2">Code</a></li>
+                <li class="tab"><a href="#result3p2">Résultat</a></li>
+              </ul>
+            </div>
+            <!-- Card Content -->
+            <div class="card-content grey lighten-4">
+              <!-- Code Tab -->
+              <div id="code3p2">
+              <pre>
+                <code>
+                  <?= htmlspecialchars($ex3p2); ?>
+                </code>
+              </pre>
+              </div>
+              <!-- Result Tab -->
+              <div id="result3p2">
+                <table class="centered highlight responsive-table">
+                  <thead>
+                  <tr>
+                    <th>Régions</th>
+                    <th>Nombre de Départements</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php foreach ($departements as $region => $departement): ?>
+                    <tr>
+                      <td><?= $region ?></td>
+                      <td><?= count($departement) ?></td>
+                    </tr>
+                  <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </main>
 
 <?php include("../templates/footer.php"); ?>

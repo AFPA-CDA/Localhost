@@ -90,6 +90,14 @@ $capitales = array(
   "Zagreb" => "Croatie"
 );
 
+// Array used for the "Départements" exercise
+$departements = array(
+  "Hauts-de-france" => array("Aisne", "Nord", "Oise", "Pas-de-Calais", "Somme"),
+  "Bretagne" => array("Côtes d'Armor", "Finistère", "Ille-et-Vilaine", "Morbihan"),
+  "Grand-Est" => array("Ardennes", "Aube", "Marne", "Haute-Marne", "Meurthe-et-Moselle", "Meuse", "Moselle", "Bas-Rhin", "Haut-Rhin", "Vosges"),
+  "Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
+);
+
 // ---------------------------------------------------------------------
 
 // Exercice 1 Code
@@ -286,29 +294,56 @@ $ex2p4 = /** @lang PHP */
   </table>
 PHP;
 
-// Exercice 3 Code  
-$ex3 = /** @lang PHP */
+// Exercice 3 Part 1 Code  
+$ex3p1 = /** @lang PHP */
+  <<<'PHP'
+
+<?php
+  $departements = array(
+    "Hauts-de-france" => array("Aisne", "Nord", "Oise", "Pas-de-Calais", "Somme"),
+    "Bretagne" => array("Côtes d'Armor", "Finistère", "Ille-et-Vilaine", "Morbihan"),
+    "Grand-Est" => array("Ardennes", "Aube", "Marne", "Haute-Marne", "Meurthe-et-Moselle", "Meuse", "Moselle", "Bas-Rhin", "Haut-Rhin", "Vosges"),
+    "Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
+  );
+
+  ksort($departements); ?>
+  
+  <table>
+    <thead>
+    <tr>
+      <th>Régions</th>
+      <th>Départements</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($departements as $region => $value): ?>
+      <?php foreach ($value as $departement): ?>
+        <tr>
+          <td><?= $region ?></td>
+          <td><?= $departement ?></td>
+        </tr>
+      <?php endforeach; ?>
+    <?php endforeach; ?>
+    </tbody>
+  </table>
+PHP;
+
+// Exercice 3 Part 2 Code  
+$ex3p2 = /** @lang PHP */
   <<<'PHP'
 
 <table>
   <thead>
   <tr>
-    <?php foreach (range(-1, 12) as $number): ?>
-      <?php if ($number == -1): ?>
-        <th></th>
-      <?php else: ?>
-        <th><?= $number ?></th>
-      <?php endif; ?>
-    <?php endforeach; ?>
+    <th>Régions</th>
+    <th>Nombre de Départements</th>
   </tr>
   </thead>
   <tbody>
-  <?php foreach (range(0, 12) as $i): ?>
+  <?php foreach ($departements as $region => $departement): ?>
     <tr>
-      <td><?= $i ?></td>
-      <?php foreach (range(0, 12) as $j): ?>
-        <td><?= $i * $j ?></td>
-      <?php endforeach; ?>
+      <td><?= $region ?></td>
+      <td><?= count($departement) ?></td>
     </tr>
   <?php endforeach; ?>
   </tbody>
