@@ -91,7 +91,7 @@ include("../templates/header.php");
               </div>
               <!-- Result Tab -->
               <div id="result2p1">
-                <table>
+                <table class="centered highlight responsive-table">
                   <thead>
                   <tr>
                     <th>Capitales</th>
@@ -141,7 +141,7 @@ include("../templates/header.php");
               </div>
               <!-- Result Tab -->
               <div id="result2p2">
-                <table>
+                <table class="centered highlight responsive-table">
                   <thead>
                   <tr>
                     <th>Pays</th>
@@ -234,8 +234,7 @@ include("../templates/header.php");
                   }
                 }
                 ?>
-
-                <table>
+                <table class="centered highlight responsive-table">
                   <thead>
                   <tr>
                     <th>Capitales</th>
@@ -245,8 +244,8 @@ include("../templates/header.php");
                   <tbody>
                   <?php foreach ($capitales as $capitale => $pays): ?>
                     <tr>
-                      <td><?= $pays ?></td>
                       <td><?= $capitale ?></td>
+                      <td><?= $pays ?></td>
                     </tr>
                   <?php endforeach; ?>
                   </tbody>
