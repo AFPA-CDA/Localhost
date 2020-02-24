@@ -20,6 +20,7 @@
     <li><a href="views/php/tableaux.php">Les tableaux</a></li>
     <li><a href="views/php/fonctions.php">Les fonctions</a></li>
     <li><a href="views/php/dates.php">Les dates</a></li>
+    <li><a href="views/php/fichiers.php">Les fichiers</a></li>
   </ul>
 
   <!-- Another dropdown to prevent data-target error -->
@@ -29,6 +30,7 @@
     <li><a href="views/php/tableaux.php">Les tableaux</a></li>
     <li><a href="views/php/fonctions.php">Les fonctions</a></li>
     <li><a href="views/php/dates.php">Les dates</a></li>
+    <li><a href="views/php/fichiers.php">Les fichiers</a></li>
   </ul>
 
   <!-- Navbar -->
