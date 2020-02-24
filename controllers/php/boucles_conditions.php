@@ -2,7 +2,7 @@
 // Page's title
 $title = "Exercices PHP - Boucles et Conditions";
 
-// Disable the navbar extended tabs
+// Enables the navbar extended tabs
 $tabs = true;
 
 // Items to be shown in the extended navbar
