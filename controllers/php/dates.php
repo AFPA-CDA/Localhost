@@ -65,9 +65,11 @@ $invalidDate = DateTime::createFromFormat("d/m/Y", "32/17/2019");
 $errors = DateTime::getLastErrors();
 ?>
 
-<p>
+<p class="center-align">
   <?php if ($errors["error_count"] > 0 || $errors["warning_count"] > 0): ?>
-    Vous venez de rencontrer une erreur !
+    <?php foreach($errors["warnings"] as $warning): ?>
+      <?= $warning; ?>
+    <?php endforeach; ?>
   <?php endif; ?>
 </p>
 PHP;

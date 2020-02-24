@@ -164,7 +164,9 @@ include("../templates/head.php");
 
               <p class="center-align">
                 <?php if ($errors["error_count"] > 0 || $errors["warning_count"] > 0): ?>
-                  Vous venez de rencontrer une erreur !
+                  <?php foreach($errors["warnings"] as $warning): ?>
+                    <?= $warning; ?>
+                  <?php endforeach; ?>
                 <?php endif; ?>
               </p>
             </div>
