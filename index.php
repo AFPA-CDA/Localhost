@@ -18,6 +18,7 @@
     <li><a href="views/php/initiation.php">Initiation</a></li>
     <li><a href="views/php/boucles_conditions.php">Les boucles et les conditions</a></li>
     <li><a href="views/php/tableaux.php">Les tableaux</a></li>
+    <li><a href="views/php/fonctions.php">Les fonctions</a></li>
   </ul>
 
   <!-- Another dropdown to prevent data-target error -->
@@ -25,6 +26,7 @@
     <li><a href="views/php/initiation.php">Initiation</a></li>
     <li><a href="views/php/boucles_conditions.php">Les boucles et les conditions</a></li>
     <li><a href="views/php/tableaux.php">Les tableaux</a></li>
+    <li><a href="views/php/fonctions.php">Les fonctions</a></li>
   </ul>
 
   <!-- Navbar -->

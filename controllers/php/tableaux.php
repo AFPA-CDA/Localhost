@@ -286,8 +286,8 @@ $ex2p4 = /** @lang PHP */
     <tbody>
     <?php foreach ($capitales as $capitale => $pays): ?>
       <tr>
+        <td><?= $capitales ?></td>
         <td><?= $pays ?></td>
-        <td><?= $capitale ?></td>
       </tr>
     <?php endforeach; ?>
     </tbody>

@@ -3,7 +3,7 @@
 
 <?php
 include("../../controllers/php/initiation.php");
-include("../templates/header.php");
+include("../templates/head.php");
 ?>
 
 <body>

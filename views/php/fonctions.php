@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <?php
-include("../../controllers/php/boucles_conditions.php");
+include("../../controllers/php/fonctions.php");
 include("../templates/head.php");
 ?>
 
@@ -19,7 +19,7 @@ include("../templates/head.php");
           <!--Card Content -->
           <div class="card-content">
             <p class="center-align flow-text">
-              Ecrire un script PHP qui affiche tous les nombres impairs entre 0 et 150, par ordre croissant : 1 3 5 7...
+              Ecrivez une fonction qui permette de générer un lien.
             </p>
           </div>
           <!-- Card Tabs -->
@@ -40,12 +40,8 @@ include("../templates/head.php");
               </pre>
             </div>
             <!-- Result Tab -->
-            <div id="result1">
-              <?php foreach (range(1, 150, 2) as $number): ?>
-                <p style="display: inline">
-                  <?= "$number\n" ?>
-                </p>
-              <?php endforeach; ?>
+            <div class="center-align" id="result1">
+              <?= lien("https://www.reddit.com/", "Reddit Hub"); ?>
             </div>
           </div>
         </div>
@@ -55,7 +51,7 @@ include("../templates/head.php");
           <!--Card Content -->
           <div class="card-content">
             <p class="center-align flow-text">
-              Écrire un programme qui écrit 500 fois la phrase Je dois faire des sauvegardes régulières de mes fichiers
+              Ecrivez une fonction qui calcul la somme des valeurs d'un tableau.
             </p>
           </div>
           <!-- Card Tabs -->
@@ -76,10 +72,8 @@ include("../templates/head.php");
               </pre>
             </div>
             <!-- Result Tab -->
-            <div id="result2">
-              <?php for ($i = 1; $i <= 500; $i++): ?>
-                <p>Je dois faire des sauvegardes régulières de mes fichiers</p>
-              <?php endfor; ?>
+            <div class="center-align" id="result2">
+              <?= somme(array(4, 3, 8, 2)); ?>
             </div>
           </div>
         </div>
@@ -89,8 +83,7 @@ include("../templates/head.php");
           <!--Card Content -->
           <div class="card-content">
             <p class="center-align flow-text">
-              Ecrire un script qui affiche la table de multiplication totale de {1,...,12} par {1,...,12} dans un
-              tableau HTML
+              Créer une fonction qui vérifie le niveau de complexité d'un mot de passe.
             </p>
           </div>
           <!-- Card Tabs -->
@@ -112,29 +105,8 @@ include("../templates/head.php");
             </div>
             <!-- Result Tab -->
             <div id="result3">
-              <table class="highlight responsive-table">
-                <thead>
-                <tr>
-                  <?php foreach (range(-1, 12) as $number): ?>
-                    <?php if ($number == -1): ?>
-                      <th></th>
-                    <?php else: ?>
-                      <th><?= $number ?></th>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach (range(0, 12) as $i): ?>
-                  <tr>
-                    <td><?= $i ?></td>
-                    <?php foreach (range(0, 12) as $j): ?>
-                      <td><?= $i * $j ?></td>
-                    <?php endforeach; ?>
-                  </tr>
-                <?php endforeach; ?>
-                </tbody>
-              </table>
+              <p>Mot de passe: <b>TopSecret42</b></p>
+              <?php var_dump(complex_password("TopSecret42")); ?>
             </div>
           </div>
         </div>
