@@ -46,17 +46,19 @@ $ex3 = /** @lang PHP */
 
 <?php
 $currentDate = new DateTime();
-$isLeap = date('L');
+$isLeap = $currentDate->format('L');
 ?>
 
-<p>
-  L'année <?= $currentDate->format("Y"); ?><?= $isLeap ? " est" : " n'est pas" ?> bissextile
-</p>
+<?php if ($isLeap): ?>
+  <p>L'année <?= $currentDate->format("Y") ?> est bissextile</p>
+<?php else: ?>
+  <p>L'année <?= $currentDate->format("Y") ?> n'est pas bissextile</p>
+<?php endif; ?>
 PHP;
 
 // Exercice 4 Code 
 $ex4 = /** @lang PHP */
-<<<'PHP'
+  <<<'PHP'
 
 <?php
 $invalidDate = DateTime::createFromFormat("d/m/Y", "32/17/2019");

@@ -115,15 +115,17 @@ include("../templates/head.php");
               </pre>
             </div>
             <!-- Result Tab -->
-            <div id="result3">
+            <div class="center-align" id="result3">
               <?php
               $currentDate = new DateTime();
-              $isLeap = date('L');
+              $isLeap = $currentDate->format('L');
               ?>
 
-              <p class="center-align">
-                L'année <?= $currentDate->format("Y"); ?><?= $isLeap ? " est" : " n'est pas" ?> bissextile
-              </p>
+              <?php if ($isLeap): ?>
+                <p>L'année <?= $currentDate->format("Y") ?> est bissextile</p>
+              <?php else: ?>
+                <p>L'année <?= $currentDate->format("Y") ?> n'est pas bissextile</p>
+              <?php endif; ?>
             </div>
           </div>
         </div>
