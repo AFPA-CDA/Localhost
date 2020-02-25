@@ -8,6 +8,7 @@
       <li><a href="../php/fonctions.php">Les fonctions</a></li>
       <li><a href="../php/dates.php">Les dates</a></li>
       <li><a href="../php/fichiers.php">Les fichiers</a></li>
+      <li><a href="../../assets/files/Jarditou/formulaire.html">Les formulaires</a></li>
     </ul>
 
     <!-- Another dropdown to prevent data-target error -->
@@ -18,6 +19,7 @@
       <li><a href="../php/fonctions.php">Les fonctions</a></li>
       <li><a href="../php/dates.php">Les dates</a></li>
       <li><a href="../php/fichiers.php">Les fichiers</a></li>
+      <li><a href="../../assets/files/Jarditou/formulaire.html">Les formulaires</a></li>
     </ul>
 
     <!-- Navbar -->

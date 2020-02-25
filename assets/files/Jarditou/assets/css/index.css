@@ -1,0 +1,70 @@
+/* Import fonts */
+/*noinspection CssUnknownTarget*/
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/* Global Elements */
+body {
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 33px;
+}
+
+label {
+  color: #595959 !important;
+}
+
+td > img.responsive-img {
+  height: 100px;
+  width: 100px;
+}
+
+tr > td > a {
+  color: #005c8a;
+}
+
+tr > td > a:hover {
+  filter: contrast(80);
+}
+
+ul.dropdown-content.select-dropdown > li > span {
+  color: #0d3f38;
+}
+
+section > article > p {
+  font-size: 18px;
+}
+
+/* Custom Classes */
+.datepicker-date-display {
+  background-color: #156057;
+  color: white;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Makes sure that the color has a 3:1 contrast ratio */
+.nav-wrapper {
+  background-color: #156058;
+}
+
+/* Custom ID */
+#btnSubmit {
+  background-color: #156058;
+}
+
+#promotion {
+  width: 100%;
+}
+
+#logo {
+  width: 33.33%;
+}
