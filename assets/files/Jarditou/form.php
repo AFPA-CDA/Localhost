@@ -60,14 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<p>Adresse: <?= $address ?></p>
-<p>CGU: <?= $cgu ?></p>
-<p>Ville: <?= $city ?></p>
-<p>Date: <?= $date ?></p>
-<p>Email: <?= $email ?></p>
-<p>Prénom: <?= $firstName ?></p>
-<p>Sexe: <?= $gender ?></p>
-<p>Nom: <?= $name ?></p>
-<p>Code Postal: <?= $postal ?></p>
-<p>Sujet: <?= $subject ?></p>
-<p>Question: <?= $question ?></p>
+<?php foreach ($_POST as $inputName => $inputValue): ?>
+  <p><?= "$inputName: $inputValue" ?></p>
+<?php endforeach; ?>
