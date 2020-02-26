@@ -81,7 +81,8 @@ include("../templates/head.php");
 <?php include("../templates/footer.php"); ?>
 <script>
   document.getElementById("redirection").addEventListener("click", function () {
-    document.location.replace("/Localhost/assets/files/Jarditou/formulaire.html")
+    document.location.replace("/Localhost/assets/files/Jarditou/formulaire.html") || 
+    document.location.replace("jbroyard/Localhost/assets/files/Jarditou/formulaire.html");
   });
 </script>
 </body>
