@@ -81,8 +81,7 @@ include("../templates/head.php");
 <?php include("../templates/footer.php"); ?>
 <script>
   document.getElementById("redirection").addEventListener("click", function () {
-    document.location.replace("/Localhost/assets/files/Jarditou/formulaire.html") || 
-    document.location.replace("jbroyard/Localhost/assets/files/Jarditou/formulaire.html");
+    window.location.href = "<?php echo realpath($_SERVER["PHP_SELF"]) . "../../assets/files/Jarditou/formulaire.html" ?>";
   });
 </script>
 </body>
