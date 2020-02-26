@@ -1,5 +1,4 @@
 <?php
-
 // This function makes the user data safe to use
 function sanitize_input(string $data): string
 {

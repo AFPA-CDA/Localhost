@@ -1,236 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/materialize.min.css"/>
+  <link rel="stylesheet" href="assets/css/index.css"/>
+  <title>Jarditou - Formulaire</title>
+</head>
+
+<body>
+<header role="banner">
+  <div class="container center-align">
+    <img
+      alt="Logo Jarditou"
+      class="responsive-img"
+      id="logo"
+      src="assets/img/jarditou_logo.png"
+      title="Logo jarditou"
     />
-    <link rel="stylesheet" href="assets/css/materialize.min.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Jarditou - Formulaire</title>
-  </head>
+  </div>
+</header>
 
-  <body>
-    <header role="banner">
-      <div class="container center-align">
-        <img
-          alt="Logo Jarditou"
-          class="responsive-img"
-          id="logo"
-          src="assets/img/jarditou_logo.png"
-          title="Logo jarditou"
-        />
-      </div>
-    </header>
-
-    <nav aria-label="Barre de navigation" role="navigation">
-      <div class="nav-wrapper">
-        <div class="container">
-          <a class="brand-logo" href="#">Jarditou</a>
-          <a
-            aria-haspopup="true"
-            class="sidenav-trigger"
-            data-target="mobile-nav"
-            href="#"
-            ><i class="material-icons">menu</i></a
-          >
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Tableau</a></li>
-            <li class="active"><a href="formulaire.html">Formulaire</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div aria-labelledby="mobile-nav" role="navigation">
-      <ul class="sidenav" id="mobile-nav">
+<nav aria-label="Barre de navigation" role="navigation">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="brand-logo" href="#">Jarditou</a>
+      <a
+        aria-haspopup="true"
+        class="sidenav-trigger"
+        data-target="mobile-nav"
+        href="#"
+      ><i class="material-icons">menu</i></a
+      >
+      <ul class="right hide-on-med-and-down">
         <li><a href="#">Accueil</a></li>
         <li><a href="#">Tableau</a></li>
         <li class="active"><a href="formulaire.html">Formulaire</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Horaires</a></li>
-        <li><a href="#">Plan du site</a></li>
       </ul>
     </div>
+  </div>
+</nav>
 
-    <div role="region">
-      <img
-        alt="Promotions lames de terrasse"
-        class="responsive-img materialboxed"
-        id="promotion"
-        src="assets/img/promotion.jpg"
-        title="Promotions lames de terrasse"
-      />
-    </div>
+<div aria-labelledby="mobile-nav" role="navigation">
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">Tableau</a></li>
+    <li class="active"><a href="formulaire.html">Formulaire</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Mentions légales</a></li>
+    <li><a href="#">Horaires</a></li>
+    <li><a href="#">Plan du site</a></li>
+  </ul>
+</div>
 
-    <main class="section" role="main">
-      <div class="container">
-        <form action="form.php" id="mainForm" method="POST">
-          <h1 class="center-align">Vos coordonnées</h1>
+<div role="region">
+  <img
+    alt="Promotions lames de terrasse"
+    class="responsive-img materialboxed"
+    id="promotion"
+    src="assets/img/promotion.jpg"
+    title="Promotions lames de terrasse"
+  />
+</div>
 
-          <div class="row">
-            <div class="input-field col s6">
-              <label for="name">Votre nom* :</label>
-              <input id="name" name="name" type="text" />
-              <span class="red-text" id="nameError"></span>
-            </div>
-            <div class="input-field col s6">
-              <label for="firstName">Votre prénom* :</label>
-              <input id="firstName" name="firstName" type="text" />
-              <span class="red-text" id="firstNameError"></span>
-            </div>
-          </div>
+<main class="section" role="main">
+  <div class="container">
+    <form action="form.php" id="mainForm" method="POST">
+      <h1 class="center-align">Vos coordonnées</h1>
 
-          <div class="row">
-            Sexe* :
-            <p>
-              <label>
-                <input
-                  class="with-gap"
-                  id="gender1"
-                  name="gender"
-                  type="radio"
-                  value="Féminin"
-                />
-                <span>Femme</span>
-              </label>
-            </p>
-
-            <p>
-              <label>
-                <input
-                  class="with-gap"
-                  id="gender2"
-                  name="gender"
-                  type="radio"
-                  value="Masculin"
-                />
-                <span>Masculin</span>
-              </label>
-            </p>
-            <span class="red-text" id="genderError"></span>
-          </div>
-
-          <div class="row">
-            <div class="col s12">
-              <label
-                >Date Naissance* :
-                <input class="datepicker" id="date" name="date" type="text" />
-              </label>
-              <span class="red-text" id="dateError"></span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s6">
-              <label for="postal">Code postal :</label>
-              <input id="postal" name="postal" type="text" />
-              <span class="red-text" id="postalError"></span>
-            </div>
-            <div class="input-field col s6">
-              <label for="address">Adresse :</label>
-              <input id="address" name="address" type="text" />
-              <span class="red-text" id="addressError"></span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="city">Ville :</label>
-              <input id="city" name="city" type="text" />
-              <span class="red-text" id="cityError"></span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="email">Email* :</label>
-              <input
-                id="email"
-                name="email"
-                placeholder="dave.loper@afpa.fr"
-                type="email"
-              />
-              <span class="red-text" id="emailError"></span>
-            </div>
-          </div>
-
-          <h1 class="center-align">Votre demande</h1>
-
-          <div class="row">
-            <div class="col s12">
-              <label
-                >Sujet :
-                <select id="subject" name="subject">
-                  <option value="1">Mes commandes</option>
-                  <option value="2">Question sur un produit</option>
-                  <option value="3">Réclamation</option>
-                  <option value="4">Autres</option>
-                </select>
-              </label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="question">Votre question* :</label>
-              <textarea
-                class="materialize-textarea"
-                cols="20"
-                id="question"
-                name="question"
-                rows="3"
-              ></textarea>
-              <span class="red-text" id="questionError"></span>
-            </div>
-          </div>
-
-          <div>
-            <p>
-              <label for="cgu">
-                <input name="cgu" id="cgu" type="checkbox" />
-                <span
-                  >J'accepte le traitement informatique de ce formulaire.</span
-                >
-              </label>
-            </p>
-            <span class="red-text" id="cguError"></span>
-          </div>
-
-          <button
-            class="btn waves-effect waves-light"
-            id="btnSubmit"
-            name="btnSubmit"
-            type="submit"
-          >
-            Envoyer
-            <i class="material-icons right">send</i>
-          </button>
-        </form>
-      </div>
-    </main>
-
-    <footer class="hide-on-med-and-down">
-      <nav aria-label="Navigation footer" role="navigation">
-        <div class="nav-wrapper">
-          <div class="container">
-            <ul class="space-evenly">
-              <li><a href="#">Mentions légales</a></li>
-              <li><a href="#">Horaires</a></li>
-              <li><a href="#">Plan du site</a></li>
-            </ul>
-          </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="name">Votre nom* :</label>
+          <input id="name" name="name" type="text"/>
+          <span class="red-text" id="nameError"></span>
         </div>
-      </nav>
-    </footer>
+        <div class="input-field col s6">
+          <label for="firstName">Votre prénom* :</label>
+          <input id="firstName" name="firstName" type="text"/>
+          <span class="red-text" id="firstNameError"></span>
+        </div>
+      </div>
 
-    <script src="assets/js/vendors/materialize.min.js"></script>
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/form.js"></script>
-  </body>
+      <div class="row">
+        Sexe* :
+        <p>
+          <label>
+            <input
+              class="with-gap"
+              id="gender1"
+              name="gender"
+              type="radio"
+              value="Féminin"
+            />
+            <span>Femme</span>
+          </label>
+        </p>
+
+        <p>
+          <label>
+            <input
+              class="with-gap"
+              id="gender2"
+              name="gender"
+              type="radio"
+              value="Masculin"
+            />
+            <span>Masculin</span>
+          </label>
+        </p>
+        <span class="red-text" id="genderError"></span>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <label>Date Naissance* :
+            <input class="datepicker" id="date" name="date" type="text"/>
+          </label>
+          <span class="red-text" id="dateError"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="postal">Code postal :</label>
+          <input id="postal" name="postal" type="text"/>
+          <span class="red-text" id="postalError"></span>
+        </div>
+        <div class="input-field col s6">
+          <label for="address">Adresse :</label>
+          <input id="address" name="address" type="text"/>
+          <span class="red-text" id="addressError"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="city">Ville :</label>
+          <input id="city" name="city" type="text"/>
+          <span class="red-text" id="cityError"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="email">Email* :</label>
+          <input
+            id="email"
+            name="email"
+            placeholder="dave.loper@afpa.fr"
+            type="email"
+          />
+          <span class="red-text" id="emailError"></span>
+        </div>
+      </div>
+
+      <h1 class="center-align">Votre demande</h1>
+
+      <div class="row">
+        <div class="col s12">
+          <label
+          >Sujet :
+            <select id="subject" name="subject">
+              <option value="1">Mes commandes</option>
+              <option value="2">Question sur un produit</option>
+              <option value="3">Réclamation</option>
+              <option value="4">Autres</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="question">Votre question* :</label>
+          <textarea
+            class="materialize-textarea"
+            cols="20"
+            id="question"
+            name="question"
+            rows="3"
+          ></textarea>
+          <span class="red-text" id="questionError"></span>
+        </div>
+      </div>
+
+      <div>
+        <p>
+          <label for="cgu">
+            <input name="cgu" id="cgu" type="checkbox"/>
+            <span
+            >J'accepte le traitement informatique de ce formulaire.</span
+            >
+          </label>
+        </p>
+        <span class="red-text" id="cguError"></span>
+      </div>
+
+      <button
+        class="btn waves-effect waves-light"
+        id="btnSubmit"
+        name="btnSubmit"
+        type="submit"
+      >
+        Envoyer
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+</main>
+
+<footer class="hide-on-med-and-down">
+  <nav aria-label="Navigation footer" role="navigation">
+    <div class="nav-wrapper">
+      <div class="container">
+        <ul class="space-evenly">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Horaires</a></li>
+          <li><a href="#">Plan du site</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</footer>
+
+<script src="assets/js/vendors/materialize.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/form.js"></script>
+</body>
 </html>

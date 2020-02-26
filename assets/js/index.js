@@ -7,3 +7,4 @@ document.addEventListener('DOMContentLoaded', function () {
   M.Tabs.init(tabs);
   M.Sidenav.init(sidenav);
 });
+
