@@ -132,6 +132,7 @@ $ex1 = /** @lang PHP */
   </tr>
   </thead>
   <tbody>
+  <!-- For each months in the array an entry with the month and the year is added -->
   <?php foreach ($monthAndYears as $month => $year): ?>
     <tr>
       <td><?= $month ?></td>
@@ -220,6 +221,7 @@ $ex2p1 = /** @lang PHP */
     // Sorts the array by the keys in ascending order
     ksort($capitales);
 
+    // For each months in the array an entry with the capital and the country is added 
     foreach ($capitales as $capitale => $pays): ?>
       <tr>
         <td><?= $capitale ?></td>
@@ -245,6 +247,8 @@ $ex2p2 = /** @lang PHP */
   <?php
   // Sorts the array by the values in ascending order
   asort($capitales);
+  
+  // For each months in the array an entry with the capital and the country is added
   foreach ($capitales as $capitale => $pays): ?>
     <tr>
       <td><?= $pays ?></td>
@@ -260,6 +264,7 @@ $ex2p3 = /** @lang PHP */
   <<<'PHP'
 
 <p>
+  <!-- Prints the number of country in the capitales array -->
   <?= count($capitales); ?>
 </p>
 PHP;
@@ -269,8 +274,11 @@ $ex2p4 = /** @lang PHP */
   <<<'PHP'
 
 <?php
+  // The foreach loop goes through every element in the array
   foreach ($capitales as $key => $value) {
+    // If the regex returns true
     if (preg_match("/^[^b]/i", $key)) {
+      // It unsets the element from the array
       unset($capitales[$key]);
     }
   }
@@ -284,6 +292,7 @@ $ex2p4 = /** @lang PHP */
     </tr>
     </thead>
     <tbody>
+    <!-- For each months in the array an entry with the capital and the country is added -->
     <?php foreach ($capitales as $capitale => $pays): ?>
       <tr>
         <td><?= $capitales ?></td>
@@ -306,6 +315,7 @@ $ex3p1 = /** @lang PHP */
     "Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
   );
 
+  // Sorts the array by the keys in ascending order
   ksort($departements); ?>
   
   <table>
@@ -316,7 +326,9 @@ $ex3p1 = /** @lang PHP */
     </tr>
     </thead>
     <tbody>
+    <!-- The first foreach goes through every element of the first dimension of the array -->
     <?php foreach ($departements as $region => $value): ?>
+      <!-- The second foreach goes every element of the second dimension of the array -->
       <?php foreach ($value as $departement): ?>
         <tr>
           <td><?= $region ?></td>
@@ -340,6 +352,7 @@ $ex3p2 = /** @lang PHP */
   </tr>
   </thead>
   <tbody>
+  <!-- For each regions in the array an entry with the region and the number of departements is added -->
   <?php foreach ($departements as $region => $departement): ?>
     <tr>
       <td><?= $region ?></td>

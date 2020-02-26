@@ -95,16 +95,15 @@ include("../templates/head.php");
                   <th>Email</th>
                   <th>Phone</th>
                   <th>City</th>
+                  <th>State</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($csv as $csv_value): ?>
+                <?php foreach ($csv as $csv_row): ?>
                   <tr>
-                    <td><?= $csv_value[0] ?></td>
-                    <td><?= $csv_value[1] ?></td>
-                    <td><?= $csv_value[2] ?></td>
-                    <td><?= $csv_value[3] ?></td>
-                    <td><?= $csv_value[4] ?></td>
+                    <?php foreach ($csv_row as $csv_value): ?>
+                      <td><?= $csv_value ?></td>
+                    <?php endforeach; ?>
                   </tr>
                 <?php endforeach; ?>
                 </tbody>
