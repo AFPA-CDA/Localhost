@@ -116,7 +116,7 @@ include("../templates/head.php");
                 <thead>
                 <tr>
                   <?php foreach (range(-1, 12) as $number): ?>
-                    <?php if ($number == -1): ?>
+                    <?php if ($number === -1): ?>
                       <th></th>
                     <?php else: ?>
                       <th><?= $number ?></th>

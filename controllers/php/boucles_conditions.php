@@ -46,7 +46,7 @@ $ex3 = /** @lang PHP */
     <!-- Fills the th with the values -->
     <?php foreach (range(-1, 12) as $number): ?>
     <!-- If the number is -1 it returns an empty th -->
-      <?php if ($number == -1): ?>
+      <?php if ($number === -1): ?>
         <th></th>
         <!-- Otherwise it returns the current value -->
       <?php else: ?>
