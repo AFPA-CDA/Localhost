@@ -13,7 +13,7 @@
 
 <body>
 <nav aria-label="Barre de navigation" role="navigation">
-  <!-- Dropdown content -->
+  <!-- PHP Dropdown content -->
   <ul class="dropdown-content" id="php">
     <li><a href="views/php/initiation.php">Initiation</a></li>
     <li><a href="views/php/boucles_conditions.php">Les boucles et les conditions</a></li>
@@ -45,12 +45,13 @@
       <i class="material-icons">menu</i>
     </a>
     <ul class="left hide-on-med-and-down">
-      <!-- Dropdown trigger -->
+      <!-- PHP Dropdown trigger -->
       <li class="dropdown-trigger" data-target="php">
         <a href="#">PHP
           <i class="material-icons right">arrow_drop_down</i>
         </a>
       </li>
+      <li><a href="views/ajax/index.php">AJAX</a></li>
     </ul>
   </div>
 
@@ -64,6 +65,7 @@
           <i class="material-icons right">arrow_drop_down</i>
         </a>
       </li>
+      <li><a href="views/ajax/index.php">AJAX</a></li>
     </ul>
   </div>
 </nav>

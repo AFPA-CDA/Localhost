@@ -38,6 +38,7 @@
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
+        <li><a href="../ajax/index.php">AJAX</a></li>
       </ul>
     </div>
 
@@ -51,6 +52,7 @@
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
+        <li><a href="../ajax/index.php">AJAX</a></li>
       </ul>
 
       <!-- Optional tabs under the navbar -->

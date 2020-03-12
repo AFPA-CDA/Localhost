@@ -24,6 +24,17 @@ table.highlight > tbody > tr:hover {
   background-color: rgba(194, 206, 23, 0.5) !important; /* whatever color you want */
 }
 
+/* Label focus color */
+.input-field input:focus + label {
+  color: #673ab7 !important;
+}
+
+/* Label underline focus color */
+.input-field input:focus {
+  border-bottom: 1px solid #673ab7 !important;
+  box-shadow: 0 1px 0 0 #673ab7 !important;
+}
+
 /* Makes the text deep-purple */
 .tabs .tab a {
   color: #673ab7;
