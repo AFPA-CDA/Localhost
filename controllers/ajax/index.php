@@ -8,8 +8,7 @@ $tabs = true;
 // Items to be shown in the extended navbar
 $items = array(
   "exercice1" => "Liste disques",
-  "exercice2" => "Régions et Départements",
-  "exercice3" => "TheMovieDB"
+  "exercice2" => "TheMovieDB"
 );
 
 // Exercice 1 Javascript Code
@@ -87,112 +86,6 @@ shuffle($discs);
     </tbody>
 </table>
 PHP;
-
-// Exercice 2 Code PHP 1
-$ex2php1 = /** @lang PHP */
-  <<<'PHP'
-
-<?php
-
-try {
-    // Creates a new PDO connection
-    $db = new PDO("mysql:host=localhost;dbname=ajax_regions;charset=utf8", "root", "root");
-    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die($e->getMessage());
-}
-
-// The SQL SELECT request
-$request = "SELECT reg_id, reg_v_nom FROM regions";
-
-// Makes the query to the database
-$query = $db->query($request);
-
-// Fetches all the regios ids
-$regions = $query->fetchAll();
-
-// Closes the cursor
-$query->closeCursor();
-
-// Returns the JSON version of the regions
-echo json_encode($regions);
-PHP;
-
-// Exercise 2 Code PHP 2  
-$ex2php2 = /** @lang PHP */
-  <<<'PHP'
-
-<?php
-
-try {
-    // Creates a new PDO connection
-    $db = new PDO("mysql:host=localhost;dbname=ajax_regions;charset=utf8", "root", "root");
-    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die($e->getMessage());
-}
-
-// Gets and filters the input to be used for the prepared statement
-$regionId = filter_input(INPUT_GET, "region_id", FILTER_SANITIZE_NUMBER_INT);
-
-// The SQL SELECT request
-$request = "SELECT dep_nom, dep_id FROM departements INNER JOIN regions r ON r.reg_id = departements.dep_reg_id WHERE r.reg_id = :region_id";
-
-// Prepares the statement
-$stmt = $db->prepare($request);
-
-// Bind the param with the filtered input
-$stmt->bindParam(":region_id", $regionId, PDO::PARAM_INT);
-
-// Executes the prepared statement
-$stmt->execute();
-
-// Fetches all the departements
-$departements = $stmt->fetchAll();
-
-// Closes the cursot
-$stmt->closeCursor();
-
-// Returns the JSON version of the departements
-echo json_encode($departements);
-PHP;
-
-// Exercice 2 Javascript Code
-$ex2js = /** @lang JavaScript */
-  <<<'JS'
-
-document.addEventListener("DOMContentLoaded", function () {
-    // List of all elements
-    const departementsSelect = document.getElementById("departementsSelect");
-    const regionsSelect = document.getElementById("regionsSelect");
-
-    // Makes an ajax GET request to listeoptions1.php
-    axios("listeoptions1.php").then(response => {
-        // For each regions
-        for (let region of response.data) {
-            // Adds an option with its name and id
-            regionsSelect.add(new Option(region.reg_v_nom, region.reg_id));
-        }
-    });
-    
-    // On regionsSelect change
-    regionsSelect.addEventListener("change", function () {
-        // Makes an ajax GET request to listeoptions2.php with the current region ID
-        axios(`listeoptions2.php?region_id=${this.selectedOptions[0].value}`).then(response => {
-            // Deletes all option in order to prevent duplicates
-            while (departementsSelect.hasChildNodes()) departementsSelect.removeChild(departementsSelect.firstChild);
-
-            // For each departements
-            for (let departement of response.data) {
-                // Adds an option with its name and id
-                departementsSelect.add(new Option(departement.dep_nom, departement.dep_id));
-            }
-        })
-    });
-});
-JS;
 
 // Exercice 3 Javascript Code
 $ex3 = /** @lang JavaScript */

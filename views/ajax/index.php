@@ -55,56 +55,14 @@ include("../templates/head.php");
           <!--Card Content -->
           <div class="card-content">
             <p class="center-align flow-text">
-              Reprenez le second exercice de la phase 2, modifiez votre script PHP pour envoyer les données au format
-              JSON.
-            </p>
-          </div>
-          <!-- Card Tabs -->
-          <div class="card-tabs">
-            <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a class="active" href="#js2">JS</a></li>
-              <li class="tab"><a href="#php2">PHP</a></li>
-            </ul>
-          </div>
-          <!-- Card Content -->
-          <div class="card-content grey lighten-4">
-            <!-- Javascript Code Tab -->
-            <div id="js2">
-              <pre>
-                <code>
-                  <?= htmlspecialchars($ex2js); ?>
-                </code>
-              </pre>
-            </div>
-            <!-- PHP Code Tab -->
-            <div id="php2">
-              <pre>
-                <code>
-                  <?= htmlspecialchars($ex2php1); ?>
-                </code>
-              </pre>
-              <pre>
-                <code>
-                  <?= htmlspecialchars($ex2php2); ?>
-                </code>
-              </pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card" id="exercice3">
-          <!--Card Content -->
-          <div class="card-content">
-            <p class="center-align flow-text">
               Concevez une page permettant de rechercher des informations sur les films.
             </p>
           </div>
           <!-- Card Tabs -->
           <div class="card-tabs">
             <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a class="active" href="#code">JS</a></li>
-              <li class="tab"><a href="#result">PHP</a></li>
+              <li class="tab"><a class="active" href="#code">Code</a></li>
+              <li class="tab"><a href="#result">Résultat</a></li>
             </ul>
           </div>
           <!-- Card Content -->
@@ -123,10 +81,10 @@ include("../templates/head.php");
                 <label for="movieSearch">Donnez un nom de film/serie</label>
                 <input id="movieSearch" name="movieSearch" type="search">
               </div>
-              
-              <button class="btn deep-purple" id="searchButton" type="submit">Rechercher</button>
 
-              <table class="responsive-table section" id="moviesList">
+              <button class="btn deep-purple section" id="searchButton" type="submit">Rechercher</button>
+
+              <table class="responsive-table" id="moviesList">
                 <thead>
                 <tr>
                   <th>Titre</th>
